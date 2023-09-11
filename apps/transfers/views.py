@@ -20,7 +20,7 @@ class TransferView(CreateAPIView):
             who_get.balance = float(who_get.balance) + float(how_much)
             who_transfer.save()
             who_get.save()
-            transfer = Transfers.objects.create(who_transfer=who_get, to_user=who_get, how_much=how_much)
+            transfer = Transfers.objects.create(who_transfer=who_get, who_get=who_get, how_much=how_much)
             serializer = TransferSerializer(transfer)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         except User.DoesNotExist:

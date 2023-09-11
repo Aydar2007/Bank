@@ -21,7 +21,7 @@ class Transfers(models.Model):
     )
     is_completed = models.BooleanField(
         default=False,
-        verbose_name="Статус"
+        verbose_name="Подтверждение"
     )
     created = models.DateTimeField(
         auto_now_add=True,
