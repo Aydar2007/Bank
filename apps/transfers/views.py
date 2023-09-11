@@ -5,7 +5,7 @@ from rest_framework.generics import  CreateAPIView
 from .serializers import Transfers,TransferSerializer
 from apps.transfers.models import User
 
-class CreateTransferView(CreateAPIView):
+class TransferView(CreateAPIView):
     serializer_class = TransferSerializer
     def post(self, request):
         who_transfer_id = request.data.get('who_transfer')
