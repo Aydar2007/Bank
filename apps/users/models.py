@@ -9,7 +9,7 @@ class User(AbstractUser):
         verbose_name="Электронная почта",
         unique=True
     )
-    Number = models.CharField(
+    number = models.CharField(
         max_length=15,
         verbose_name="Телефоный номер"
     )
