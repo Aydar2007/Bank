@@ -4,7 +4,7 @@ from django.contrib.auth.models import AbstractUser
 import secrets
 
 # Create your models here.
-class Username(AbstractUser):
+class Authentication(AbstractUser):
     email = models.EmailField(
         verbose_name="Электронная почта",
         unique=True
