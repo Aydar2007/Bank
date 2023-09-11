@@ -18,7 +18,7 @@ class UserDetailSerializer(serializers.ModelSerializer):
                   )
 
 
-class RegisterUserSerializer(serializers.ModelSerializer):
+class UserRegisterSerializer(serializers.ModelSerializer):
     password1 = serializers.CharField(
         max_length=100, write_only=True
     )
